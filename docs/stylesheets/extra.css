@@ -1,0 +1,90 @@
+:root {
+  --polaris-ink: #10222f;
+  --polaris-muted: #526575;
+  --polaris-line: #d8e2ea;
+  --polaris-surface: #f5f8fa;
+}
+
+.md-header {
+  box-shadow: none;
+}
+
+.polaris-hero {
+  min-height: 360px;
+  display: flex;
+  align-items: center;
+  margin: -1.2rem -1.2rem 2rem;
+  padding: 4rem 1.2rem;
+  background:
+    linear-gradient(110deg, rgba(9, 31, 47, 0.88), rgba(29, 88, 118, 0.68)),
+    radial-gradient(circle at 82% 24%, rgba(174, 231, 242, 0.72), transparent 28%),
+    linear-gradient(145deg, #e8f1f5 0%, #b9d6e2 48%, #eef5f8 100%);
+  color: white;
+}
+
+.polaris-hero__content {
+  width: min(980px, 100%);
+  margin: 0 auto;
+}
+
+.polaris-kicker {
+  margin: 0 0 0.6rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #bcecf5;
+}
+
+.polaris-hero h1 {
+  margin: 0;
+  color: white;
+  font-size: clamp(2.6rem, 8vw, 5rem);
+  line-height: 1;
+}
+
+.polaris-lead {
+  max-width: 680px;
+  margin: 1rem 0 1.5rem;
+  color: #edf8fb;
+  font-size: 1.1rem;
+}
+
+.polaris-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.polaris-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.9rem;
+  margin: 1rem 0 2rem;
+}
+
+.polaris-card {
+  display: flex;
+  min-height: 128px;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  border: 1px solid var(--polaris-line);
+  border-radius: 8px;
+  background: var(--polaris-surface);
+  color: var(--polaris-ink);
+  transition: border-color 160ms ease, transform 160ms ease;
+}
+
+.polaris-card:hover {
+  border-color: #52a9be;
+  transform: translateY(-2px);
+}
+
+.polaris-card strong {
+  font-size: 1.05rem;
+}
+
+.polaris-card span {
+  color: var(--polaris-muted);
+}

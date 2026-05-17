@@ -1,0 +1,79 @@
+site_name: PoLarIS
+site_description: Documentation and case studies for the PoLarIS ice sheet model.
+site_url: https://example.github.io/PoLarIS/
+repo_name: PoLarIS
+repo_url: https://github.com/example/PoLarIS
+
+theme:
+  name: material
+  language: zh
+  logo: assets/images/polaris-mark.svg
+  favicon: assets/images/polaris-mark.svg
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  palette:
+    - scheme: default
+      primary: blue grey
+      accent: cyan
+
+nav:
+  - 首页: index.md
+  - 文档:
+      - manual/index.md
+      - 快速开始: manual/quickstart.md
+      - 安装与编译: manual/installation.md
+      - 输入数据: manual/input-data.md
+      - 参数配置: manual/configuration.md
+      - 运行流程: manual/workflow.md
+      - 输出说明: manual/outputs.md
+      - 常见问题: manual/faq.md
+  - 案例:
+      - cases/index.md
+      - 理想实验: cases/idealized-experiment.md
+      - 格陵兰冰盖: cases/greenland.md
+      - 南极冰盖: cases/antarctica.md
+      - 案例模板: cases/template.md
+  - 开发:
+      - dev/index.md
+      - 代码结构: dev/architecture.md
+      - 贡献指南: dev/contributing.md
+      - 版本记录: dev/changelog.md
+  - 资源:
+      - resources/index.md
+      - 数据与配置: resources/data-and-configs.md
+      - 论文引用: resources/citation.md
+      - 联系方式: resources/contact.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - tables
+  - toc:
+      permalink: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - stylesheets/extra.css
+
+plugins:
+  - search
