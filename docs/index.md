@@ -3,18 +3,18 @@ hide:
   - navigation
 ---
 
-# PoLarIS
+# Polar Land Ice Simulator
 
 <section class="polaris-hero">
   <div class="polaris-hero__content">
-    <p class="polaris-kicker">Polar Ice Sheet Model</p>
+<!--    <p class="polaris-kicker">Polar Ice Sheet Model</p>
     <h1>PoLarIS</h1>
     <p class="polaris-lead">
       面向极地冰盖演化、冰冻圈过程和地球系统研究的冰盖模式文档中心。
-    </p>
+    </p> -->
     <div class="polaris-actions">
       <a class="md-button md-button--primary" href="manual/quickstart/">快速开始</a>
-      <a class="md-button" href="cases/">查看案例</a>
+<!--      <a class="md-button" href="cases/">查看案例</a> -->
     </div>
   </div>
 </section>
@@ -40,13 +40,14 @@ hide:
   </a>
 </div>
 
-## 适用场景
+<!--## 适用场景
 
 - 冰盖长期演化模拟
 - 格陵兰与南极区域实验
 - 理想化动力学测试
 - 气候强迫敏感性实验
 - 模型结果诊断与案例复现
+-->
 
 ## 维护方式
 

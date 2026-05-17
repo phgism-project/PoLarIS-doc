@@ -10,15 +10,17 @@
 }
 
 .polaris-hero {
-  min-height: 360px;
+  min-height: 700px;
   display: flex;
   align-items: center;
   margin: -1.2rem -1.2rem 2rem;
   padding: 4rem 1.2rem;
   background:
-    linear-gradient(110deg, rgba(9, 31, 47, 0.88), rgba(29, 88, 118, 0.68)),
-    radial-gradient(circle at 82% 24%, rgba(174, 231, 242, 0.72), transparent 28%),
-    linear-gradient(145deg, #e8f1f5 0%, #b9d6e2 48%, #eef5f8 100%);
+    linear-gradient(110deg, rgba(9, 31, 47, 0.3), rgba(29, 88, 118, 0.1)),
+    url("../assets/images/AISmodel.png") center / 100% 100% no-repeat;
+    #linear-gradient(110deg, rgba(9, 31, 47, 0.88), rgba(29, 88, 118, 0.68)),
+    #radial-gradient(circle at 82% 24%, rgba(174, 231, 242, 0.72), transparent 28%),
+    #linear-gradient(145deg, #e8f1f5 0%, #b9d6e2 48%, #eef5f8 100%);
   color: white;
 }
 
