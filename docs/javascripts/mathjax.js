@@ -1,12 +1,10 @@
 window.MathJax = {
   tex: {
-    inlineMath: [['$', '$']],
-    displayMath: [['$$', '$$']],
-    processEscapes: true,
-    processEnvironments: true
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]]
+  },
+  options: {
+    ignoreHtmlClass: ".*",
+    processHtmlClass: "arithmatex"
   }
 };
-
-window.addEventListener("load", () => {
-  MathJax.typesetPromise();
-});
