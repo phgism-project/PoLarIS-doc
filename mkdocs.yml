@@ -27,6 +27,7 @@ nav:
   - 文档:
       - manual/index.md
       - 快速开始: manual/quickstart.md
+      - 模式简介: manual/introduction.md
       - 安装与编译: manual/installation.md
       - 输入数据: manual/input-data.md
       - 参数配置: manual/configuration.md
