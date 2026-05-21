@@ -1,11 +1,19 @@
 window.MathJax = {
   tex: {
-    // 把 "$" 加到行内公式的识别符中
-    inlineMath: [['$', '$'], ["\\(", "\\)"]],
-    displayMath: [['$$', '$$'], ["\\[", "\\]"]]
+    // 这里是关键：告诉 MathJax 认识单个 $ 和 双个 $$
+    inlineMath: [["\\(", "\\)"], ["$", "$"]],
+    displayMath: [["\\[", "\\]"], ["$$", "$$"]],
+    processEscapes: true,
+    processEnvironments: true
   },
   options: {
-    // 推荐的默认设置，跳过一些不需要渲染代码的标签
-    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    ignoreHtmlClass: ".*|",
+    processHtmlClass: "arithmatex"
   }
 };
+
+// 这一段是 MkDocs Material 官方要求的：
+// 因为 Material 主题切换页面时不刷新浏览器，这段代码确保切换页面后公式依然能正常渲染
+document$.subscribe(() => {
+  MathJax.typesetPromise()
+})
