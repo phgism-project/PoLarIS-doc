@@ -36,18 +36,3 @@ hide:
     </a>
   </div>
 </section>
-
-<section class="polaris-section polaris-about">
-  <div>
-    <h2>文档内容</h2>
-    <p>
-      本站整理 PoLarIS 的使用说明、案例实验、开发资料和资源索引，帮助研究者复现实验流程并理解模型输出。
-    </p>
-  </div>
-  <ul class="polaris-link-list">
-    <li><a href="manual/">模型文档</a></li>
-    <li><a href="cases/">案例展示</a></li>
-    <li><a href="dev/">开发指南</a></li>
-    <li><a href="resources/citation/">论文引用</a></li>
-  </ul>
-</section>
