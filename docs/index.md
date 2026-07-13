@@ -5,14 +5,8 @@ hide:
 
 <section class="polaris-hero">
   <div class="polaris-hero__content">
-    <p class="polaris-kicker">Polar Land Ice Simulator</p>
-    <h1>PoLarIS</h1>
-    <p class="polaris-lead">
-      面向极地冰盖演化、冰冻圈过程和地球系统研究的冰盖模式文档中心。
-    </p>
     <div class="polaris-actions">
       <a class="md-button md-button--primary" href="manual/quickstart/">快速开始</a>
-      <a class="md-button" href="manual/">阅读文档</a>
     </div>
   </div>
 </section>
