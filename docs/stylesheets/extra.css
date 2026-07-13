@@ -2,54 +2,64 @@
   --polaris-ink: #10222f;
   --polaris-muted: #526575;
   --polaris-line: #d8e2ea;
-  --polaris-surface: #f5f8fa;
+  --polaris-surface: #f6f9fb;
+  --polaris-accent: #087f9e;
 }
 
 .md-header {
   box-shadow: none;
 }
 
+.md-main__inner {
+  margin-top: 0;
+}
+
+.md-content__inner {
+  margin-bottom: 2.5rem;
+}
+
 .polaris-hero {
-  min-height: 700px;
   display: flex;
+  min-height: 430px;
   align-items: center;
-  margin: -1.2rem -1.2rem 2rem;
-  padding: 4rem 1.2rem;
+  margin: -1.2rem -1.2rem 2.5rem;
+  padding: 4.5rem 1.2rem;
   background:
-    linear-gradient(110deg, rgba(9, 31, 47, 0.3), rgba(29, 88, 118, 0.1)),
-    url("../assets/images/AISmodel.png") center / 100% 100% no-repeat;
-    #linear-gradient(110deg, rgba(9, 31, 47, 0.88), rgba(29, 88, 118, 0.68)),
-    #radial-gradient(circle at 82% 24%, rgba(174, 231, 242, 0.72), transparent 28%),
-    #linear-gradient(145deg, #e8f1f5 0%, #b9d6e2 48%, #eef5f8 100%);
+    linear-gradient(90deg, rgba(8, 24, 36, 0.78), rgba(8, 24, 36, 0.28)),
+    url("../assets/images/AISmodel.png") center / cover no-repeat;
   color: white;
 }
 
-.polaris-hero__content {
+.polaris-hero__content,
+.polaris-section {
   width: min(980px, 100%);
-  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .polaris-kicker {
-  margin: 0 0 0.6rem;
+  margin: 0 0 0.75rem;
+  color: #bcecf5;
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #bcecf5;
 }
 
 .polaris-hero h1 {
   margin: 0;
   color: white;
-  font-size: clamp(2.6rem, 8vw, 5rem);
-  line-height: 1;
+  font-size: clamp(3rem, 7vw, 5rem);
+  letter-spacing: 0;
+  line-height: 0.95;
 }
 
 .polaris-lead {
   max-width: 680px;
-  margin: 1rem 0 1.5rem;
+  margin: 1rem 0 1.6rem;
   color: #edf8fb;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
+  line-height: 1.75;
 }
 
 .polaris-actions {
@@ -58,35 +68,106 @@
   gap: 0.7rem;
 }
 
-.polaris-grid {
+.polaris-section {
+  margin-bottom: 2.5rem;
+}
+
+.polaris-entry-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 0.9rem;
-  margin: 1rem 0 2rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+  border-top: 1px solid var(--polaris-line);
+  border-bottom: 1px solid var(--polaris-line);
 }
 
-.polaris-card {
-  display: flex;
-  min-height: 128px;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 1rem;
-  border: 1px solid var(--polaris-line);
-  border-radius: 8px;
-  background: var(--polaris-surface);
+.polaris-entry {
+  display: block;
+  min-height: 180px;
+  padding: 1.35rem 1.25rem;
+  border-right: 1px solid var(--polaris-line);
   color: var(--polaris-ink);
-  transition: border-color 160ms ease, transform 160ms ease;
 }
 
-.polaris-card:hover {
-  border-color: #52a9be;
-  transform: translateY(-2px);
+.polaris-entry:last-child {
+  border-right: 0;
 }
 
-.polaris-card strong {
+.polaris-entry:hover {
+  background: var(--polaris-surface);
+}
+
+.polaris-entry span {
+  display: block;
+  margin-bottom: 0.75rem;
+  color: var(--polaris-accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.polaris-entry strong {
+  display: block;
   font-size: 1.05rem;
 }
 
-.polaris-card span {
+.polaris-entry p {
+  margin: 0.75rem 0 0;
   color: var(--polaris-muted);
+}
+
+.polaris-about {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  gap: 2rem;
+  padding-top: 0.5rem;
+}
+
+.polaris-about h2 {
+  margin-top: 0;
+}
+
+.polaris-about p {
+  max-width: 680px;
+  color: var(--polaris-muted);
+}
+
+.polaris-link-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--polaris-line);
+}
+
+.polaris-link-list li {
+  border-bottom: 1px solid var(--polaris-line);
+}
+
+.polaris-link-list a {
+  display: block;
+  padding: 0.7rem 0;
+  color: var(--polaris-ink);
+  font-weight: 600;
+}
+
+@media screen and (max-width: 760px) {
+  .polaris-hero {
+    min-height: 360px;
+    padding: 3rem 1.2rem;
+  }
+
+  .polaris-entry-grid,
+  .polaris-about {
+    grid-template-columns: 1fr;
+  }
+
+  .polaris-entry {
+    min-height: auto;
+    border-right: 0;
+    border-bottom: 1px solid var(--polaris-line);
+  }
+
+  .polaris-entry:last-child {
+    border-bottom: 0;
+  }
 }
