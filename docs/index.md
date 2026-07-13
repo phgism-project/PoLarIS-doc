@@ -4,6 +4,8 @@ hide:
   - toc
 ---
 
+<h1 class="polaris-visually-hidden">PoLarIS</h1>
+
 <section class="polaris-hero">
   <div class="polaris-hero__content">
     <div class="polaris-actions">

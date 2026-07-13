@@ -10,30 +10,35 @@
   box-shadow: none;
 }
 
-.md-main__inner {
+.md-main__inner:has(.polaris-hero) {
   max-width: none;
   margin-top: 0;
 }
 
-.md-content {
+.md-content:has(.polaris-hero) {
   max-width: none;
 }
 
-.md-content__inner {
+.md-content__inner:has(.polaris-hero) {
+  margin-top: 0;
   margin-bottom: 3.5rem;
-  padding-top: 0;
+  padding: 0;
+}
+
+.polaris-visually-hidden {
+  display: none;
 }
 
 .polaris-hero {
   display: flex;
-  min-height: 620px;
+  min-height: 100vh;
   align-items: center;
   width: 100vw;
-  margin: 0 calc(50% - 50vw);
+  margin: -0.8rem calc(50% - 50vw) 0;
   padding: 5.5rem 1.2rem;
   background:
     linear-gradient(90deg, rgba(8, 24, 36, 0.78), rgba(8, 24, 36, 0.28)),
-    url("../assets/images/AISmodel.png") center / 120% auto no-repeat;
+    url("../assets/images/AISmodel.png") center calc(50% + 4mm) / cover no-repeat;
   color: white;
 }
 
@@ -48,11 +53,12 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.7rem;
+  transform: translateX(-2cm);
 }
 
 .polaris-section {
   width: min(980px, calc(100vw - 2.4rem));
-  margin-top: 4rem;
+  margin-top: 5mm;
   margin-bottom: 2.5rem;
 }
 
@@ -66,8 +72,8 @@
 
 .polaris-entry {
   display: block;
-  min-height: 180px;
-  padding: 1.35rem 1.25rem;
+  min-height: 72px;
+  padding: 0.55rem 0.9rem;
   border-right: 1px solid var(--polaris-line);
   color: var(--polaris-ink);
 }
@@ -82,7 +88,7 @@
 
 .polaris-entry span {
   display: block;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.3rem;
   color: var(--polaris-accent);
   font-size: 0.78rem;
   font-weight: 700;
@@ -92,23 +98,28 @@
 
 .polaris-entry strong {
   display: block;
-  font-size: 1.05rem;
+  font-size: 1rem;
 }
 
 .polaris-entry p {
-  margin: 0.75rem 0 0;
+  margin: 0.3rem 0 0;
   color: var(--polaris-muted);
+  font-size: 0.86rem;
 }
 
 @media screen and (max-width: 760px) {
   .polaris-hero {
-    min-height: 520px;
+    min-height: 100vh;
     padding: 3rem 1.2rem;
-    background-size: auto 100%;
+    background-size: cover;
+  }
+
+  .polaris-actions {
+    transform: none;
   }
 
   .polaris-section {
-    margin-top: 2.5rem;
+    margin-top: 5mm;
   }
 
   .polaris-entry-grid {
