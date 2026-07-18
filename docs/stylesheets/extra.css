@@ -50,13 +50,13 @@
 .polaris-hero--greenland {
   background:
     linear-gradient(90deg, rgba(8, 24, 36, 0.78), rgba(8, 24, 36, 0.28)),
-    url("../assets/images/GrIS.gif") center calc(50% + 4mm) / cover no-repeat;
+    url("../assets/images/GrIS.gif") center / 100% 100% no-repeat;
 }
 
 .polaris-hero--qinghai-tibet {
   background:
     linear-gradient(90deg, rgba(8, 24, 36, 0.78), rgba(8, 24, 36, 0.28)),
-    url("../assets/images/ERG.GIF") center calc(50% + 4mm) / cover no-repeat;
+    url("../assets/images/ERG.GIF") center / 100% 100% no-repeat;
 }
 
 .polaris-hero__content,
@@ -129,6 +129,11 @@
     min-height: 100vh;
     padding: 3rem 1.2rem;
     background-size: cover;
+  }
+
+  .polaris-hero--greenland,
+  .polaris-hero--qinghai-tibet {
+    background-size: 100% 100%;
   }
 
   .polaris-actions {
