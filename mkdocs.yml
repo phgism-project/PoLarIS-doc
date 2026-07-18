@@ -1,4 +1,4 @@
-site_name: 极地陆冰模拟器（PoLarIS）
+site_name: 极地陆冰模拟器
 site_description: Documentation and case studies for the PoLarIS ice sheet model.
 site_url: https://phgism-project.github.io/PoLarIS-doc/
 repo_name: phgism-project/PoLarIS-doc
@@ -7,7 +7,8 @@ repo_url: https://github.com/phgism-project/PoLarIS-doc
 theme:
   name: material
   language: zh
-  favicon: assets/images/polaris-mark.svg
+  logo: assets/images/polaris_logo.png
+  favicon: assets/images/polaris_logo.png
   features:
     - navigation.tabs
     - navigation.sections

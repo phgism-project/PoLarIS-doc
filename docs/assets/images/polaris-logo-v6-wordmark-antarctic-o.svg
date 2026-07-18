@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 180" role="img" aria-labelledby="title desc">
+  <title id="title">PoLarIS wordmark with Antarctic O</title>
+  <desc id="desc">A clean PoLarIS wordmark with the letter o represented by a dimensional Antarctic ice sheet and flow lines.</desc>
+  <defs>
+    <linearGradient id="wordmark-fill" x1="70" y1="45" x2="560" y2="110" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f7fcff"/>
+      <stop offset="0.55" stop-color="#b9e9f4"/>
+      <stop offset="1" stop-color="#47b8d2"/>
+    </linearGradient>
+    <linearGradient id="antarctic-ice" x1="-24" y1="-22" x2="24" y2="25" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.58" stop-color="#d7f3fa"/>
+      <stop offset="1" stop-color="#72cfe4"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="640" height="180" rx="28" fill="#10222f"/>
+
+  <text
+    x="78"
+    y="112"
+    fill="url(#wordmark-fill)"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="84"
+    font-weight="800"
+    letter-spacing="2"
+  >P</text>
+
+  <g transform="translate(172 84) scale(1.35)">
+    <path
+      d="M-3-20c6 1 11 5 15 10 5 7 11 9 16 15-8 1-13 6-19 9-6 4-13 3-19 7-4-7-11-9-16-15 8-3 11-9 12-17 2-6 5-9 11-9Z"
+      fill="url(#antarctic-ice)"
+      stroke="#b9e9f4"
+      stroke-width="3"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M-14-4c9-7 20-10 33-7 4 5 8 8 13 12-16-3-31-1-46 5-4-3-7-6-10-9 3 0 6-1 10-1Z"
+      fill="#ffffff"
+      opacity="0.55"
+    />
+    <path
+      d="M-18 9c10 5 20 7 31 3 6-2 11-6 17-8-7 5-12 10-21 14-6 4-13 3-19 7-3-6-8-8-13-12 2-1 3-2 5-4Z"
+      fill="#2398b6"
+      opacity="0.22"
+    />
+    <path d="M-18 -1c9-3 19-3 30 0 7 2 13 5 19 10" fill="none" stroke="#2ca6c2" stroke-width="2.4" stroke-linecap="round" opacity="0.9"/>
+    <path d="M-20 9c11 3 22 4 33 0 6-2 11-5 16-7" fill="none" stroke="#5bc9dd" stroke-width="2.2" stroke-linecap="round" opacity="0.82"/>
+    <path d="M-8 -15c8 9 12 20 12 33" fill="none" stroke="#eafcff" stroke-width="2" stroke-linecap="round" opacity="0.78"/>
+  </g>
+
+  <text
+    x="216"
+    y="112"
+    fill="url(#wordmark-fill)"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="84"
+    font-weight="800"
+    letter-spacing="2"
+  >LarIS</text>
+</svg>

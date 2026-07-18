@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">PoLarIS logo concept</title>
+  <desc id="desc">A stylized polar ice sheet and flow lines forming a P-shaped mark.</desc>
+  <defs>
+    <linearGradient id="ice" x1="58" y1="63" x2="190" y2="205" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f8fcff"/>
+      <stop offset="0.55" stop-color="#bfeaf4"/>
+      <stop offset="1" stop-color="#6fc8dc"/>
+    </linearGradient>
+    <linearGradient id="flow" x1="72" y1="141" x2="190" y2="205" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0a6f8d"/>
+      <stop offset="1" stop-color="#34bdd7"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="256" height="256" rx="44" fill="#10222f"/>
+
+  <path
+    d="M78 205V57h61c35 0 60 22 60 53 0 33-25 55-61 55h-30v40H78Z"
+    fill="none"
+    stroke="#dff8fc"
+    stroke-width="24"
+    stroke-linejoin="round"
+  />
+
+  <path
+    d="M82 151c16-42 42-67 77-75 20 8 32 20 35 36-16-7-35-8-55-3-27 8-48 22-63 42h6Z"
+    fill="url(#ice)"
+  />
+
+  <path
+    d="M76 151c21-5 41-5 60 0 22 6 39 17 52 34H67c2-13 5-24 9-34Z"
+    fill="#ffffff"
+    opacity="0.94"
+  />
+
+  <path d="M74 171c27-7 58-4 93 9" fill="none" stroke="url(#flow)" stroke-width="7" stroke-linecap="round"/>
+  <path d="M75 189c31-5 60-1 86 11" fill="none" stroke="#78d7e8" stroke-width="6" stroke-linecap="round"/>
+  <path d="M94 133c21-17 43-27 68-30" fill="none" stroke="#eafcff" stroke-width="5" stroke-linecap="round" opacity="0.9"/>
+
+  <circle cx="181" cy="57" r="13" fill="#4bd2e7"/>
+  <path d="M164 57h34M181 40v34" stroke="#dff8fc" stroke-width="5" stroke-linecap="round" opacity="0.8"/>
+</svg>

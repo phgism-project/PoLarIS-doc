@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">PoLarIS circular grid dynamics logo concept</title>
+  <desc id="desc">A circular polar mark with numerical grid lines and dynamic ice-flow curves.</desc>
+  <defs>
+    <radialGradient id="polar-disc" cx="44%" cy="34%" r="72%">
+      <stop offset="0" stop-color="#f8fdff"/>
+      <stop offset="0.45" stop-color="#aee7f2"/>
+      <stop offset="1" stop-color="#176f89"/>
+    </radialGradient>
+    <linearGradient id="dynamic-flow" x1="62" y1="79" x2="199" y2="184" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.48" stop-color="#62d0e5"/>
+      <stop offset="1" stop-color="#087f9e"/>
+    </linearGradient>
+    <clipPath id="disc-clip">
+      <circle cx="128" cy="128" r="92"/>
+    </clipPath>
+  </defs>
+
+  <rect width="256" height="256" rx="44" fill="#10222f"/>
+
+  <circle cx="128" cy="128" r="96" fill="#0d2b3a"/>
+  <circle cx="128" cy="128" r="92" fill="url(#polar-disc)" stroke="#dff8fc" stroke-width="5"/>
+
+  <g clip-path="url(#disc-clip)" opacity="0.62">
+    <path d="M36 128h184M128 36v184" stroke="#ffffff" stroke-width="2.5"/>
+    <path d="M49 82c43 19 94 19 158 0M49 174c43-19 94-19 158 0" fill="none" stroke="#ffffff" stroke-width="2"/>
+    <path d="M82 49c19 43 19 94 0 158M174 49c-19 43-19 94 0 158" fill="none" stroke="#ffffff" stroke-width="2"/>
+    <circle cx="128" cy="128" r="62" fill="none" stroke="#ffffff" stroke-width="2"/>
+    <circle cx="128" cy="128" r="32" fill="none" stroke="#ffffff" stroke-width="2"/>
+  </g>
+
+  <path
+    d="M72 149c26-32 64-51 111-58"
+    fill="none"
+    stroke="#10222f"
+    stroke-width="17"
+    stroke-linecap="round"
+    opacity="0.25"
+  />
+  <path
+    d="M72 149c26-32 64-51 111-58"
+    fill="none"
+    stroke="url(#dynamic-flow)"
+    stroke-width="9"
+    stroke-linecap="round"
+  />
+  <path
+    d="M170 80l22 8-16 17"
+    fill="none"
+    stroke="#eafcff"
+    stroke-width="8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <path
+    d="M67 179c35-21 79-25 129-12"
+    fill="none"
+    stroke="#10222f"
+    stroke-width="13"
+    stroke-linecap="round"
+    opacity="0.22"
+  />
+  <path
+    d="M67 179c35-21 79-25 129-12"
+    fill="none"
+    stroke="#eafcff"
+    stroke-width="5"
+    stroke-linecap="round"
+    opacity="0.92"
+  />
+
+  <circle cx="128" cy="128" r="92" fill="none" stroke="#10222f" stroke-width="10" opacity="0.22"/>
+  <circle cx="128" cy="128" r="92" fill="none" stroke="#dff8fc" stroke-width="4"/>
+</svg>
