@@ -35,31 +35,47 @@
 }
 
 .polaris-hero {
+  position: relative;
+  display: block;
+  width: 100vw;
+  margin: -0.8rem calc(50% - 50vw) 0;
+  padding: 0;
+  background: #10222f;
+  color: white;
+}
+
+.polaris-hero--antarctica {
   display: flex;
   min-height: 100vh;
   align-items: center;
-  width: 100vw;
-  margin: -0.8rem calc(50% - 50vw) 0;
   padding: 5.5rem 1.2rem;
   background:
     linear-gradient(90deg, rgba(8, 24, 36, 0.78), rgba(8, 24, 36, 0.28)),
     url("../assets/images/AISmodel.png") center calc(50% + 4mm) / cover no-repeat;
-  color: white;
 }
 
-.polaris-hero--greenland {
-  background:
-    linear-gradient(90deg, rgba(8, 24, 36, 0.78), rgba(8, 24, 36, 0.28)),
-    url("../assets/images/GrIS.gif") center / 100% 100% no-repeat;
+.polaris-hero__media {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
-.polaris-hero--qinghai-tibet {
-  background:
-    linear-gradient(90deg, rgba(8, 24, 36, 0.78), rgba(8, 24, 36, 0.28)),
-    url("../assets/images/ERG.GIF") center / 100% 100% no-repeat;
+.polaris-hero__content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  width: min(980px, 100%);
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 1.2rem;
 }
 
-.polaris-hero__content,
+.polaris-hero--antarctica .polaris-hero__content {
+  position: static;
+  inset: auto;
+}
+
 .polaris-section {
   width: min(980px, 100%);
   margin-right: auto;
@@ -125,15 +141,8 @@
 }
 
 @media screen and (max-width: 760px) {
-  .polaris-hero {
-    min-height: 100vh;
-    padding: 3rem 1.2rem;
-    background-size: cover;
-  }
-
-  .polaris-hero--greenland,
-  .polaris-hero--qinghai-tibet {
-    background-size: 100% 100%;
+  .polaris-hero__content {
+    padding: 0 1.2rem;
   }
 
   .polaris-actions {
