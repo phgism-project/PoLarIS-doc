@@ -46,6 +46,18 @@
   color: white;
 }
 
+.polaris-hero--greenland {
+  background:
+    linear-gradient(90deg, rgba(8, 24, 36, 0.78), rgba(8, 24, 36, 0.28)),
+    url("../assets/images/GrIS.gif") center calc(50% + 4mm) / cover no-repeat;
+}
+
+.polaris-hero--qinghai-tibet {
+  background:
+    linear-gradient(90deg, rgba(8, 24, 36, 0.78), rgba(8, 24, 36, 0.28)),
+    url("../assets/images/ERG.GIF") center calc(50% + 4mm) / cover no-repeat;
+}
+
 .polaris-hero__content,
 .polaris-section {
   width: min(980px, 100%);
