@@ -22,7 +22,9 @@ theme:
       accent: cyan
 
 nav:
-  - 首页: index.md
+  - 南极: index.md
+  - 格陵兰: greenland.md
+  - 青藏高原: qinghai-tibet.md
   - 文档:
       - manual/index.md
       - 快速开始: manual/quickstart.md
@@ -33,17 +35,6 @@ nav:
       - 运行流程: manual/workflow.md
       - 输出说明: manual/outputs.md
       - 常见问题: manual/faq.md
-  - 案例:
-      - cases/index.md
-      - 理想实验: cases/idealized-experiment.md
-      - 格陵兰冰盖: cases/greenland.md
-      - 南极冰盖: cases/antarctica.md
-      - 案例模板: cases/template.md
-  - 开发:
-      - dev/index.md
-      - 代码结构: dev/architecture.md
-      - 贡献指南: dev/contributing.md
-      - 版本记录: dev/changelog.md
   - 资源:
       - resources/index.md
       - 数据与配置: resources/data-and-configs.md

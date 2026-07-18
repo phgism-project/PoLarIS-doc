@@ -4,7 +4,7 @@ hide:
   - toc
 ---
 
-<h1 class="polaris-visually-hidden">极地陆冰模拟器（PoLarIS）</h1>
+<h1 class="polaris-visually-hidden">格陵兰</h1>
 
 <section class="polaris-hero">
   <div class="polaris-hero__content">

@@ -10,6 +10,10 @@
   box-shadow: none;
 }
 
+.md-main__inner {
+  margin-top: 2rem;
+}
+
 .md-main__inner:has(.polaris-hero) {
   max-width: none;
   margin-top: 0;
