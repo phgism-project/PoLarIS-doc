@@ -12,18 +12,24 @@
 }
 
 .md-header__inner {
-  min-height: 4.4rem;
+  min-height: 4rem;
+}
+
+.md-header__title {
+  font-size: 1.55rem;
 }
 
 .md-header__button.md-logo {
-  margin: 0.35rem 0.65rem 0.35rem 0;
+  margin: 0.25rem 0.7rem 0.25rem 0;
   padding: 0;
 }
 
 .md-header__button.md-logo img,
 .md-header__button.md-logo svg {
-  width: 3.7rem;
-  height: 3.7rem;
+  width: auto;
+  height: 3.2rem;
+  max-width: 12rem;
+  object-fit: contain;
 }
 
 .md-main__inner {
