@@ -1,6 +1,6 @@
 # 模拟案例
 
-本页根据 `install_and_example.tex` 中“数值模拟案例”一节整理。PoLarIS 的基本使用思路是：编译得到 `ins-flow` 后，准备网格文件、输入数据文件和模式参数文件，然后在算例目录中运行模拟。
+PoLarIS 的基本使用思路是：编译得到 `ins-flow` 后，准备网格文件、输入数据文件和模式参数文件，然后在算例目录中运行模拟。
 
 ## 模拟框架
 
@@ -112,6 +112,12 @@ mkdir build
 cd build
 unzip ../triangle.zip
 make
+```
+
+如果提示：./showme.c:104:10: fatal error: X11/Xlib.h: No such file or directory
+则可运行: 
+```bash
+sudo apt install libx11-dev
 ```
 
 将生成的 `triangle` 可执行文件放到与 `box.node`、`box.elem` 相同的目录中，然后运行：
