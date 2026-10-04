@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" role="img" aria-labelledby="title desc">
+  <title id="title">PoLarIS ice-sheet profile logo concept</title>
+  <desc id="desc">A stylized ice-sheet cross section with bedrock and glacier flow lines.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="180" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#16384b"/>
+      <stop offset="1" stop-color="#10222f"/>
+    </linearGradient>
+    <linearGradient id="ice-profile" x1="58" y1="44" x2="238" y2="139" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.55" stop-color="#caeff7"/>
+      <stop offset="1" stop-color="#79cfe2"/>
+    </linearGradient>
+    <linearGradient id="bed" x1="48" y1="125" x2="284" y2="160" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2d5261"/>
+      <stop offset="1" stop-color="#193240"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="320" height="180" rx="28" fill="url(#sky)"/>
+
+  <path
+    d="M38 135c36-15 67-21 94-18 28 4 52 16 83 15 24-1 45-9 67-19v40H38Z"
+    fill="url(#bed)"
+  />
+  <path
+    d="M38 135c36-15 67-21 94-18 28 4 52 16 83 15 24-1 45-9 67-19"
+    fill="none"
+    stroke="#5f8795"
+    stroke-width="4"
+    stroke-linecap="round"
+  />
+
+  <path
+    d="M47 127c27-31 61-55 101-71 22-9 47-13 75-10 21 3 39 9 55 18-22 2-43 8-62 20-25 16-45 39-67 48-24 10-59 6-102-5Z"
+    fill="url(#ice-profile)"
+    stroke="#e8fbff"
+    stroke-width="5"
+    stroke-linejoin="round"
+  />
+
+  <path d="M75 112c39-14 75-22 107-23 27-1 51 4 73 15" fill="none" stroke="#2691ad" stroke-width="5" stroke-linecap="round"/>
+  <path d="M91 93c31-12 63-19 96-19 22 0 42 4 60 12" fill="none" stroke="#52bfd5" stroke-width="5" stroke-linecap="round"/>
+  <path d="M117 74c24-8 50-11 76-8" fill="none" stroke="#eaffff" stroke-width="4" stroke-linecap="round" opacity="0.9"/>
+
+  <path d="M83 123c16 4 32 6 49 5" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.75"/>
+  <path d="M133 128c23 1 44-3 64-12" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.65"/>
+  <path d="M199 112c17-11 36-18 57-21" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
+
+  <circle cx="270" cy="43" r="9" fill="#66d7ea"/>
+  <path d="M270 25v36M252 43h36" stroke="#dff8fc" stroke-width="4" stroke-linecap="round" opacity="0.85"/>
+</svg>

@@ -1,0 +1,1786 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation and case studies for the PoLarIS ice sheet model.">
+      
+      
+      
+        <link rel="canonical" href="https://phgism-project.github.io/PoLarIS-doc/manual/introduction/">
+      
+      
+        <link rel="prev" href="../quickstart/">
+      
+      
+        <link rel="next" href="../installation/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/polaris_logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>模式简介 - 极地陆冰模拟器</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/headings.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#polaris" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="极地陆冰模拟器" class="md-header__button md-logo" aria-label="极地陆冰模拟器" data-md-component="logo">
+      
+  <img src="../../assets/images/polaris_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            极地陆冰模拟器
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              模式简介
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="cyan"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/phgism-project/PoLarIS-doc" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    phgism-project/PoLarIS-doc
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  南极
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../greenland/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  格陵兰
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../qinghai-tibet/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  青藏高原
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  文档
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../resources/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  资源
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="极地陆冰模拟器" class="md-nav__button md-logo" aria-label="极地陆冰模拟器" data-md-component="logo">
+      
+  <img src="../../assets/images/polaris_logo.png" alt="logo">
+
+    </a>
+    极地陆冰模拟器
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/phgism-project/PoLarIS-doc" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    phgism-project/PoLarIS-doc
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    南极
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../greenland/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    格陵兰
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qinghai-tibet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    青藏高原
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    文档
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    文档
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quickstart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    快速开始
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模式简介
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模式简介
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        控制方程及边界条件
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        变分问题
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        高阶精确有限元离散
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="高阶精确有限元离散">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        四面体网格剖分
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stokes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        STOKES方程的有限元离散
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#picard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PICARD线性化
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        滑动边界上无穿透条件的实现
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        线性方程组求解
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="线性方程组求解">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        预处理器
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        并行化
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    编译安装
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../input-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    输入数据
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    参数配置
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mesh-generation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网格生成
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模拟案例
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../outputs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    输出说明
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    常见问题
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../resources/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    资源
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    资源
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/data-and-configs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数据与配置
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/citation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    论文引用
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/contact/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    联系方式
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        控制方程及边界条件
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        变分问题
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        高阶精确有限元离散
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="高阶精确有限元离散">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        四面体网格剖分
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stokes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        STOKES方程的有限元离散
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#picard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PICARD线性化
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        滑动边界上无穿透条件的实现
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        线性方程组求解
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="线性方程组求解">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        预处理器
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        并行化
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="polaris">POLARIS简介<a class="headerlink" href="#polaris" title="Permanent link">&para;</a></h1>
+<p>PoLarIS是Polar Land Ice Simulator的缩写，读音为“北极星”的英文发音，意思
+是“极地陆冰模拟器”
+，主要面向地球三极陆冰（南北极冰盖和亚洲高山区冰川）的动力学模拟。</p>
+<p>目前，PoLarIS包括三个动力核心：浅冰近似、一阶近似和Stokes。一阶近似是目前开发和支持的重点。以下是控制方程、有限元离散及其变分以及并行计算的技术细节。</p>
+<h2 id="_1">控制方程及边界条件<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>冰盖的动力学行为由具有非线性流变学的不可压粘性流体的Stokes方程建模，即假设非线性本构律。设 <span class="arithmatex">\([0, t_{\max}]\)</span> 是我们感兴趣的时间段， <span class="arithmatex">\(\Omega_t\)</span> 表示冰盖占据
+的三维空间区域，则有动量守恒方程：</p>
+<div class="arithmatex">\[
+\nabla\cdot\sigma+\rho\mathbf{g}=0\quad\mathrm{in}\quad\Omega_t\times[0,t_{\max}],
+\qquad(1.1)
+\]</div>
+<p>质量守恒方程：</p>
+<div class="arithmatex">\[
+\nabla\cdot\mathbf{u}=0\quad\mathrm{in}\quad\Omega_t\times[0,t_{\max}],
+\qquad(1.2)
+\]</div>
+<p>其中<span class="arithmatex">\(\mathbf{u}=(u_x,u_y,u_z)^T\)</span>表示速度，<span class="arithmatex">\(\sigma\)</span>表示全应力张量，<span class="arithmatex">\(\rho\)</span>表示冰的 密度，<span class="arithmatex">\(\mathbf{g}=(0,0,-g)\)</span>表示重力加速度。应力张量<span class="arithmatex">\(\sigma\)</span>可以分解为剪切力<span class="arithmatex">\(\tau\)</span> 和各向同性的压力<span class="arithmatex">\(p\)</span>，即，</p>
+<div class="arithmatex">\[
+    \sigma=\tau-p\mathbf{I}\quad\mathrm{or}\quad\sigma_{ij}=\tau_{ij}-p\delta_{ij},
+\qquad(1.3)
+\]</div>
+<p>其中，<span class="arithmatex">\(p=-\frac13tr(\sigma)\)</span>，<span class="arithmatex">\(\delta_{ij}\)</span>是Kronecker记号。结合(<a href="#eq:1" data-reference-type="ref"
+data-reference="eq:1">[eq:1]</a>)和(<a href="#eq:3" data-reference-type="ref"
+data-reference="eq:3">[eq:3]</a>)式， 得到瞬时的动量守恒方程:</p>
+<div class="arithmatex">\[
+    -\nabla\cdot\tau+\nabla p=\rho\mathbf{g}\quad\mathrm{in}\quad\Omega_t\times[0,t_{\max}].
+    \qquad(1.4)
+\]</div>
+<p>应变率张量 <span class="arithmatex">\(\dot{\varepsilon}_\mathbf{u}\)</span> 定义为：</p>
+<div class="arithmatex">\[
+    \left(\dot{\varepsilon}_\mathbf{u}\right)_{ij}=\frac12{\left(\frac{\partial u_i}{\partial x_j}+\frac{\partial u_j}{\partial x_i}\right)}.
+    \qquad(1.5)
+\]</div>
+<p>剪切力张量 <span class="arithmatex">\(\tau\)</span> 和应变率张量 <span class="arithmatex">\(\dot{\varepsilon}_\mathbf{u}\)</span> 之间的关系由非线性的Glen冰流本构律给出：</p>
+<div class="arithmatex">\[
+    \tau=2\eta_\mathbf{u}\dot{\varepsilon}_\mathbf{u}
+    \qquad(1.6)
+\]</div>
+<p>其中，</p>
+<div class="arithmatex">\[
+    \eta_{\mathbf{u}} = \frac{1}{2}A^{-\frac{1}{n}}\dot{\varepsilon}_e^{\frac{1-n}{n}}
+    \qquad(1.7)
+\]</div>
+<p>其中，</p>
+<div class="arithmatex">\[
+    \dot{\varepsilon}_e = \left(\frac{1}{2}\dot{\varepsilon}_\mathbf{u}:\dot{\varepsilon}_\mathbf{u}\right)^{\frac{1}{2}}
+    \qquad(1.8)
+\]</div>
+<p>变形速率系数 <span class="arithmatex">\(A\)</span> 通常与温度、压力和冰的其他性质有关，根据 Zhang 等（2001）的假设，本文认为 A 仅依赖于温度，即</p>
+<div class="arithmatex">\[
+A = A_0\exp\left(-\frac{Q}{RT}\right)
+\]</div>
+<p>其中 <span class="arithmatex">\(A_0\)</span> 是通常用作调谐参数的经验流动常数 <span class="arithmatex">\(Q\)</span> 表示蠕变的活化能，<span class="arithmatex">\(R\)</span> 表示通用气体常数，并且 <span class="arithmatex">\(T\)</span> 表示以开尔文测量的绝对温度，
+我们假设 <span class="arithmatex">\(A\)</span> 是在整个空间一致的常数。</p>
+<p>在冰盖的表面，对 <span class="arithmatex">\(\Gamma_s\)</span> 施加边界条件</p>
+<div class="arithmatex">\[
+    \sigma\cdot\mathbf{n}=-p_{atm}\cdot\mathbf{n}\quad\text{on}\quad\Gamma_s
+     \qquad(1.9)
+\]</div>
+<p>其中，<span class="arithmatex">\(\mathbf{n}\)</span> 表示冰盖边界的外法线单位向量，<span class="arithmatex">\(p_{atm}\)</span> 表示大气压。因为大气压力相对于冰内的压力可以忽略不计，所以我们做了标准简化，<span class="arithmatex">\(p_{atm}=0\)</span>.</p>
+<p>沿着横向边界 <span class="arithmatex">\(\Gamma_l\)</span> ,我们施加三种类型的边界条件之一。如(<a href="#eq:4" data-reference-type="ref"
+data-reference="eq:4">[eq:4]</a>)、或零速度条件 <span class="arithmatex">\(\mathbf{u}=0\)</span> 或周期
+性边界条件。这种灵活性使得该模型不仅可以模拟真实的冰盖，还可以将我们的方法应用于使用后两种非物理边界条件的基准算例。
+在我们当前的模型和实验中，我们没有考虑横向边界部分淹没在水中的情况，例如在冰-海洋边界处发生的情况。</p>
+<p>冰盖的底部可以分解成两部分：<span class="arithmatex">\(\Gamma_{b,fix}\)</span> 表示冰盖固定在底部基岩上的部分，<span class="arithmatex">\(\Gamma_{b,sld}\)</span> 表示冰盖底部可以滑动的部分。在底部边界的固定部分，我们施加零速度边界条件</p>
+<div class="arithmatex">\[
+\mathbf{u}=0\quad\text{on}\quad\Gamma_{b,fix}
+\]</div>
+<p>这蕴含了无穿透条件 <span class="arithmatex">\(\mathbf{u}\cdot\mathbf{n}=0\)</span> 和无滑动条件 <span class="arithmatex">\(\mathbf{u}\times\mathbf{n}=0\)</span> .
+在底部边界的滑动部分，我们施加Rayleigh摩擦边界条件</p>
+<div class="arithmatex">\[
+    \mathbf{u}\cdot\mathbf{n}=0\quad\text{and}\quad\mathbf{n}\cdot\sigma\cdot\mathbf{t}=-\beta^2\mathbf{u}\cdot\mathbf{t}\quad\text{on}\quad\Gamma_{b,sld}
+    \qquad(1.10)
+\]</div>
+<p>考虑Rayleigh摩擦定律主要是为了与基准实验进行比较。参数 <span class="arithmatex">\(\beta^2\)</span> 表示给定的滑动系数，<span class="arithmatex">\(\mathbf{t}\)</span> 表示与底面相切
+的任何单位向量。(<a href="#eq:5" data-reference-type="ref"
+data-reference="eq:5">[eq:5]</a>)中的负号意味着摩擦力的方向与速度的方向相反。</p>
+<h2 id="_2">变分问题<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>这里介绍Stokes方程的有限元求解，有限元离散建立在对微分方程的变分问题上。这一节，我们推导施加适当边界条件的Stokes方程组
+(<a href="#eq:2" data-reference-type="ref"
+data-reference="eq:2">[eq:2]</a>),(<a href="#eq:6" data-reference-type="ref"
+data-reference="eq:6">[eq:6]</a>).用 <span class="arithmatex">\(L^2(\Omega_t)\)</span>表示 <span class="arithmatex">\(\Omega_t\)</span> 上的平方可积函数空间，<span class="arithmatex">\(\mathbf{H}^1(\Omega_t)\)</span> 表示每个分量都是 <span class="arithmatex">\(H^1(\Omega_t)\)</span> 的向量函数空间，即每个分量都是 <span class="arithmatex">\(L^2(\Omega_t)\)</span>,且所有一阶导数也都是 <span class="arithmatex">\(L^2(\Omega_t)\)</span> 的。</p>
+<p>对(<a href="#eq:6" data-reference-type="ref"
+data-reference="eq:6">[eq:6]</a>)两边同时乘测试函数 <span class="arithmatex">\(\mathbf{v}\in\mathbf{H}^1(\Omega_t)\)</span>,然后在 <span class="arithmatex">\(\Omega_t\)</span> 上积分，由Green公式有：</p>
+<div class="arithmatex">\[
+    \int_{\Omega_t}\tau:\nabla\mathbf{v}d\mathbf{x}-\int_{\Omega_t}p\nabla\cdot\mathbf{v}d\mathbf{x}-
+    \int_{\Gamma}\mathbf{n}\cdot\sigma\cdot\mathbf{v}ds = \rho\int_{\Omega_t}\mathbf{g}\cdot\mathbf{v}d\mathbf{x}.
+    \qquad(1.11)
+\]</div>
+<p>其中，<span class="arithmatex">\(\Gamma=\Gamma_s\cup\Gamma_b\cup\Gamma_l,\quad\tau:\nabla\mathbf{v}\)</span> 表示张量 <span class="arithmatex">\(\tau\)</span> 和 <span class="arithmatex">\(\nabla\mathbf{v}\)</span>
+对应元素相乘再求和。我们使用Einstein求和记号，即重复指标表示求和，
+并记 <span class="arithmatex">\(v_{i,j}=\frac{\partial v_i}{\partial x_j}\)</span>,
+则 <span class="arithmatex">\(\tau:\nabla\mathbf{v}=\tau_{ij}v_{i,j}\)</span>.由应力张量 <span class="arithmatex">\(\tau\)</span> 的对称性，
+我们有 <span class="arithmatex">\(\tau_{ij}v_{i,j}=\tau_{ji}v_{j,i}=\tau_{ij}v_{j,i}\)</span>. 所以有</p>
+<div class="arithmatex">\[
+\tau_{ij}v_{i,j}=\frac{1}{2}\tau_{ij}(v_{i,j}+v_{j,i})=\tau_{ij}(\dot{\varepsilon}_{\mathbf{v}})_{ij}=2\eta_{\mathbf{u}}(\dot{\varepsilon}_{\mathbf{u}})_{ij}(\dot{\varepsilon}_{\mathbf{v}})_{ij}.
+\]</div>
+<p>因此有：</p>
+<div class="arithmatex">\[
+    \int_{\Omega_t}\tau:\nabla\mathbf{v}d\mathbf{x} = \int_{\Omega_t}2\eta_{\mathbf{u}}\dot{\varepsilon}_{\mathbf{u}}:\dot{\varepsilon}_{\mathbf{v}}d\mathbf{x}.
+    \qquad(1.12)
+\]</div>
+<p>在(<a href="#eq:4" data-reference-type="ref"
+data-reference="eq:4">[eq:4]</a>)中我们假设 <span class="arithmatex">\(p_{atm}=0\)</span>,因此有</p>
+<div class="arithmatex">\[
+    \int_{\Gamma_s}\mathbf{n}\cdot\sigma\cdot\mathbf{v}ds = 0.
+    \qquad(1.13)
+\]</div>
+<p>若在 <span class="arithmatex">\(\Gamma_l\)</span> 上施加边界条件(<a href="#eq:4" data-reference-type="ref"
+data-reference="eq:4">[eq:4]</a>),则也有</p>
+<div class="arithmatex">\[
+    \int_{\Gamma_l}\mathbf{n}\cdot\sigma\cdot\mathbf{v}ds = 0.
+    \qquad(1.14)
+\]</div>
+<p>若在 <span class="arithmatex">\(\Gamma_l\)</span> 上施加周期边界条件，则我们要求测试函数 <span class="arithmatex">\(\mathbf{v}\)</span> 也是周期的，则(<a href="#eq:7" data-reference-type="ref"
+data-reference="eq:7">[eq:7]</a>)依然成立。若在 <span class="arithmatex">\(\Gamma_l\)</span> 上施加零速度边界条件，
+即要求 <span class="arithmatex">\(\mathbf{v}=0\quad\text{on}\quad\Gamma_l\)</span>,则(<a href="#eq:7" data-reference-type="ref"
+data-reference="eq:7">[eq:7]</a>)依然成立。
+在无滑动边界 <span class="arithmatex">\(\Gamma_{b,fix}\)</span>，我们要求测试函数满足 <span class="arithmatex">\(\mathbf{v}=0\)</span>,因此有</p>
+<div class="arithmatex">\[
+    \int_{\Gamma_{b,fix}}\mathbf{n}\cdot\sigma\cdot\mathbf{v}ds = 0.
+    \qquad(1.15)
+\]</div>
+<p>在滑动边界 <span class="arithmatex">\(\Gamma_{b,sld}\)</span> 上，因为 <span class="arithmatex">\(\mathbf{u}\cdot\mathbf{n}=0\)</span>,因此我们要求测试函数满足 <span class="arithmatex">\(\mathbf{v}\cdot\mathbf{n}=0\)</span> .
+结合摩擦定律(<a href="#eq:5" data-reference-type="ref"
+data-reference="eq:5">[eq:5]</a>)，我们有</p>
+<div class="arithmatex">\[
+    \int_{\Gamma_{b,sld}}\mathbf{n}\cdot\sigma\cdot\mathbf{v}ds = -\int_{\Gamma_{b,fix}}\beta^2\mathbf{u}\cdot\mathbf{v}ds.
+    \qquad(1.16)
+\]</div>
+<p>记</p>
+<div class="arithmatex">\[
+\tilde{\mathbf{H}}(\Omega_t)=\{\mathbf{u}\in\mathbf{H}^1(\Omega_t):\mathbf{u}\vert_{\Gamma_l\cup\Gamma_{b,fix}}=0,(\mathbf{u}\cdot\mathbf{n})\vert_{\Gamma_{b,sld}}=0\}.
+\]</div>
+<p>注意到 <span class="arithmatex">\(\tilde{\mathbf{H}}(\Omega_t)\)</span> 中的函数在指定边界上满足齐次边界条件，
+把(<a href="#eq:8" data-reference-type="ref"
+data-reference="eq:8">[eq:8]</a>)到(<a href="#eq:9" data-reference-type="ref"
+data-reference="eq:9">[eq:9]</a>)代入(<a href="#eq:10" data-reference-type="ref"
+data-reference="eq:10">[eq:10]</a>),我们就得到Stokes方程组的弱形式：
+求解 <span class="arithmatex">\(\mathbf{u}\in\tilde{\mathbf{H}}(\Omega_t)\)</span> 和 <span class="arithmatex">\(p\in L^2(\Omega_t)\)</span>,使得</p>
+<p>对任意 <span class="arithmatex">\(\mathbf{v}\in\tilde{\mathbf{H}}(\Omega_t)\)</span> 和 <span class="arithmatex">\(q\in L^2(\Omega_t)\)</span> 成立。</p>
+<div class="arithmatex">\[ 
+\begin{cases} 
+\int_{\Omega_t}2\eta_{\mathbf{u}}\dot{\varepsilon}_{\mathbf{u}}:\dot{\varepsilon}_{\mathbf{v}}\,d\mathbf{x} 
++\int_{\Gamma_{b,fix}}\beta^2\mathbf{u}\cdot\mathbf{v}\,ds 
+-\int_{\Omega_t}p\nabla\cdot\mathbf{v}\,d\mathbf{x} 
+= \rho\int_{\Omega_t}\mathbf{g}\cdot\mathbf{v}\,d\mathbf{x} \\ 
+-\int_{\Omega_t}q\nabla\cdot\mathbf{u}\,d\mathbf{x}=0 
+\end{cases} 
+\qquad(1.17)
+\]</div>
+<p>特别地，(<a href="#eq:11" data-reference-type="ref"
+data-reference="eq:11">[eq:11]</a>)对应于零速度的横向边界。如果横向边界条件类似于(<a href="#eq:4" data-reference-type="ref"
+data-reference="eq:4">[eq:4]</a>)，且 <span class="arithmatex">\(p_{atm}=0\)</span>,则 <span class="arithmatex">\(\tilde{\mathbf{H}}(\Omega_t)\)</span>
+中的函数在 <span class="arithmatex">\(\Gamma_l\)</span> 上为 <span class="arithmatex">\(0\)</span> 的要求可以去掉。如果横向边界施加周期边界条件，则该要求被
+替换为 <span class="arithmatex">\(\tilde{\mathbf{H}}(\Omega_t)\)</span> 中的函数是周期的。</p>
+<h2 id="_3">高阶精确有限元离散<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>这一节我们给出高阶精确有限元冰盖模型的具体描述。</p>
+<h3 id="_4">四面体网格剖分<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>格陵兰岛和南极洲等冰盖的几何形状具有高度的各向异性，水平尺度与垂直尺度之比介于 <span class="arithmatex">\(100:1\)</span>到<span class="arithmatex">\(1000:1\)</span>之间。
+此外，在冰盖的大部分地区，水平方向变量的变化比垂直方向的变化小得多。因此，使用三维各向同性网格来离散各向异性的几何区域会产生大量的网格点，更多的自由度是必要的。因此，当获得自由度相对较少的高阶精确解时，需要计算网格的各向异性。
+除了冰盖边界附近和集中流动区域（例如冰流和出口冰川），解应该在水平方向上的变化比在垂直方向上的变化要慢得多。所以在
+冰盖的大部分区域上，在水平方向上可以有较大的网格间距，因为在这些区域，解大多是缓慢变化的。另外需要注意的是，
+缩放垂直坐标可以改善区域的纵横比，但是也会改变偏微分方程中的系数，因此物理纵横比在离散系统中仍然会出现，所以仅仅靠缩放
+垂直坐标无法避免冰盖的高纵横比。</p>
+<p>冰盖的高纵横比需要构造高纵横比的各向异性网格，为了避免生成低质量网格，在四面体网格生成中需要特殊的技巧。我们首先
+对冰盖的水平尺度 <span class="arithmatex">\(\Omega_H\)</span> 生成较高质量的二维三角形网格，记作 <span class="arithmatex">\(\mathcal{Q}_h\)</span>.然后，通过添加描述冰厚的 <span class="arithmatex">\(z\)</span> 坐标，将二维网格转换为覆盖整个冰盖区域的三角形网格，在冰盖顶面是三角形。然后，在竖直方向将每个三棱柱分成相同数量
+的三棱柱，从而生成冰盖区域 <span class="arithmatex">\(\Omega_t\)</span> 的完全三维、分层、棱柱形网格。最后，我们通过将每个棱柱单元分解
+为三个四面体来获得冰盖的四面体网格。</p>
+<h3 id="stokes">STOKES方程的有限元离散<a class="headerlink" href="#stokes" title="Permanent link">&para;</a></h3>
+<p>记 <span class="arithmatex">\(\mathcal{T}_h\)</span> 是上一节所讨论的冰盖区域四面体网格剖分，这里 <span class="arithmatex">\(h\)</span> 表示对网格尺寸的一种刻画，比如说所有四面体单元
+内切球直径的最大值。使用有限元空间 <span class="arithmatex">\(P_{1,h}(\mathcal{T}_h)\)</span> 来逼近压强，<span class="arithmatex">\(P_{1,h}(\mathcal{T}_h)\)</span> 表示<span class="arithmatex">\(\mathcal{T}_h\)</span> 上的分片线性多项式，即，在每个四面体单元上，函数形如 <span class="arithmatex">\(a_0+a_1x+a_2y+a_3z\)</span>,其中 <span class="arithmatex">\(a_i,(i=0,1,2,3)\)</span> 是常数。这样的有限元函数
+能够被它在四面体四个顶点的取值唯一确定。对速度分量的有限元逼近，我们选择更高阶的有限元空间 <span class="arithmatex">\(P_{2,h}(\mathcal{T}_h)\)</span>，在每个四面体单元上是二次函数，
+即 <span class="arithmatex">\(b_0+b_1x+b_2y+b_3z+b_4x^2+b_5y^2+b_6z^2+b_7xy+b_8yz+b_9zx\)</span>,其中 <span class="arithmatex">\(b_i,(i=0,\cdots,9)\)</span> 是常数，这样的函数能被它在四面体
+四个顶点和六条棱的中点的取值唯一确定（图<a href="#fig:4" data-reference-type="ref"
+data-reference="fig:4">2.1</a>）。</p>
+<p align="center">
+  <img src="figures/fig4.png" width="85%" alt="冰盖关键动力过程示意图"><br><br>
+  <b>图2.1：</b>Taylor-Hood元。
+</p>
+
+<p>我们在横向边界条件为零速度边界时定义有限元空间：</p>
+<div class="arithmatex">\[
+\tilde{\mathbf{P}}_{2,h}(\mathcal{T}_h)=
+\left\{
+\mathbf{u}_h \in \left(P_{2,h}(\mathcal{T}_h)\right)^3 :
+\begin{array}{l}
+\mathbf{u}_h = 0 \quad \text{on } \Gamma_l \cup \Gamma_{b,\mathrm{fix}} \\
+\mathbf{u}_h \cdot \mathbf{n} = 0 \quad \text{on } \Gamma_{b,\mathrm{sld}}
+\end{array}
+\right\}
+\qquad(1.18)
+\]</div>
+<p>因此，给定<span class="arithmatex">\(\Omega_t\)</span>和<span class="arithmatex">\(\mathcal{T}_h\)</span>,变分问题离散为：求解<span class="arithmatex">\(\mathbf{u}_h\in\tilde{\mathbf{P}}_{2,h}(\mathcal{T}_h)\)</span>
+和<span class="arithmatex">\(p_h\in P_{1,h}(\mathcal{T}_h)\)</span>,使得</p>
+<div class="arithmatex">\[
+\begin{cases}
+\int_{\Omega_t}2\eta_{\mathbf{u}_h}\dot{\varepsilon}_{\mathbf{u}_h}:\dot{\varepsilon}_{\mathbf{v}_h}\,d\mathbf{x}
++\int_{\Gamma_{b,fix}}\beta^2\mathbf{u}_h\cdot\mathbf{v}_h\,ds
+-\int_{\Omega_t}p_h\nabla\cdot\mathbf{v}_h\,d\mathbf{x}
+=\rho\int_{\Omega_t}\mathbf{g}\cdot\mathbf{v}_h\,d\mathbf{x}\\
+-\int_{\Omega_t}q_h\nabla\cdot\mathbf{u}_h\,d\mathbf{x}=0
+\end{cases}
+\qquad(1.19)
+\]</div>
+<p>对任意<span class="arithmatex">\(\mathbf{v}_h\in\tilde{\mathbf{P}}_{2,h}(\mathcal{T}_h)\)</span>和<span class="arithmatex">\(q_h\in P_{1,h}(\mathcal{T}_h)\)</span>成立。
+因为<span class="arithmatex">\(\eta\)</span>依赖于速度<span class="arithmatex">\(\mathbf{u}_h\)</span>，因此(<a href="#eq:12" data-reference-type="ref"
+data-reference="eq:12">[eq:12]</a>)是一个关于<span class="arithmatex">\(\mathbf{u}_h,p_h\)</span>的非线性方程组。</p>
+<p>不使用更高阶元有几个原因，比如解可能没有足够的光滑性来保证额外的精度。最重要的原因是，对于真实的冰盖
+形状，边界条件是给定的一些离散点上的值，并且边界可能是极其不规则的。最后，缺乏对边界几何的
+准确把握是决定求解精度的一个限制因素，因此高阶元不一定有用。</p>
+<h3 id="picard">PICARD线性化<a class="headerlink" href="#picard" title="Permanent link">&para;</a></h3>
+<p>我们使用Picard线性化算法来求解非线性系统(<a href="#eq:12" data-reference-type="ref"
+data-reference="eq:12">[eq:12]</a>)，更复杂的线性化算法比如牛顿法或拟牛顿法通常会有更快的收敛阶，但是这些方法需要更好的初值，即初值要足够靠近解，才能有更快的收敛速度，因此，这类方法通常以Picard线性化算法几步后的解作为初值。</p>
+<p>Picard线性化算法将依赖于速度的粘性系数 <span class="arithmatex">\(\eta_{\mathbf{u}_h}\)</span> 滞后，在每一步Picard迭代中，<span class="arithmatex">\(\eta_{\mathbf{u}_h}\)</span> 使用上一步迭代速度的近似解来估计。因此，给定速度初值<span class="arithmatex">\(\mathbf{u}_h^{(0)}\)</span>（通常取为0，此时 <span class="arithmatex">\(\eta_{\mathbf{u}_h}\)</span> 是一个正常数），
+就可以通过不断求解线性方程组(<a href="#eq:13" data-reference-type="ref"
+data-reference="eq:13">[eq:13]</a>)来获得速度 <span class="arithmatex">\(\mathbf{u}_h^{(j)}\)</span>和压强n<span class="arithmatex">\(p_h^{(j)}\)</span>.</p>
+<div class="arithmatex">\[
+\begin{cases}
+\int_{\Omega_t}2\eta_{\mathbf{u}_h^{(j-1)}}\dot{\varepsilon}_{\mathbf{u}_h^{(j)}}:\dot{\varepsilon}_{\mathbf{v}_h}\,d\mathbf{x}
++\int_{\Gamma_{b,fix}}\beta^2\mathbf{u}_h^{(j)}\cdot\mathbf{v}_h\,ds
+-\int_{\Omega_t}p_h^{(j)}\nabla\cdot\mathbf{v}_h\,d\mathbf{x}
+=\rho\int_{\Omega_t}\mathbf{g}\cdot\mathbf{v}_h\,d\mathbf{x}\\
+-\int_{\Omega_t}q_h\nabla\cdot\mathbf{u}_h^{(j)}\,d\mathbf{x}=0
+\end{cases}
+\qquad(1.20)
+\]</div>
+<p>当残差满足条件时，迭代终止，并令 <span class="arithmatex">\(\mathbf{u}_h=\mathbf{u}_h^{(j)}\)</span>,通过简单的启发式渐近分析可知，Picard迭代是线性收敛的，
+且压缩常数为 <span class="arithmatex">\(\frac{n-1}{n}\)</span>，其中 <span class="arithmatex">\(n\)</span> 表示Glen流动定律中的指数。</p>
+<p>在每一步Picard迭代中，线性有限元问题([eq:13])等价于一个对称鞍点问题：</p>
+<div class="arithmatex">\[
+\begin{pmatrix}
+F &amp; B^T \\
+B &amp; 0
+\end{pmatrix}
+\begin{pmatrix}
+\vec{\mathbf{u}} \\
+\vec{p}
+\end{pmatrix}=
+\begin{pmatrix}
+\vec{\mathbf{r}} \\
+0
+\end{pmatrix}
+\qquad(1.21)
+\]</div>
+<p>其中 <span class="arithmatex">\(\vec{\mathbf{u}},\vec{p}\)</span> 分别表示速度和压强的自由度。因此，接下来只需要求解线性方程组(<a href="#eq:14" data-reference-type="ref"
+data-reference="eq:14">[eq:14]</a>).</p>
+<h3 id="_5">滑动边界上无穿透条件的实现<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>在滑动边界 <span class="arithmatex">\(\Gamma_{b,sld}\)</span> 上，我们需要实现无穿透条件 <span class="arithmatex">\(\mathbf{u}\cdot\mathbf{n}=0\)</span>.这个条件难以处理是因为
+通常涉及速度的三个分量的线性组合。我们的处理方式是在滑动边界上每一个速度结点处进行坐标旋转：使得旋转后的坐标系有一个轴
+与边界垂直，另外两个轴与边界相切。在这个新的坐标系中，无穿透边界条件是容易实现的。</p>
+<p>用 <span class="arithmatex">\(M\)</span> 表示所有速度结点的个数，则速度向量有 <span class="arithmatex">\(3M\)</span> 个自由度。那么速度自由度 <span class="arithmatex">\(\vec{\mathbf{u}}\)</span> 可以记作</p>
+<div class="arithmatex">\[
+\vec{\mathbf{u}}=\begin{pmatrix}\mathbf{u}_{1}\\ \vdots\\\mathbf{u}_{M}\end{pmatrix}
+\]</div>
+<p>其中 <span class="arithmatex">\(\mathbf{u}_i=(u_{ix},u_{iy},u_{iz})^T\)</span> 表示第 <span class="arithmatex">\(i\)</span> 个速度结点的速度向量。滑动边界上的无穿透条件可以写成</p>
+<div class="arithmatex">\[
+\mathbf{u}_k\cdot\mathbf{n}_k=0,\quad\forall k\in\sigma_{b,sld}.
+\]</div>
+<p>其中 <span class="arithmatex">\(\sigma_{b,sld}\)</span> 表示滑动边界上的速度结点集合。</p>
+<p>对任意的滑动边界上的自由度 <span class="arithmatex">\(k\in\sigma_{b,sld}\)</span>，我们有局部坐标系 <span class="arithmatex">\((\mathbf{n}_k,\mathbf{t}_k^1,\mathbf{t}_k^2)\)</span>,其中 <span class="arithmatex">\(\mathbf{n}_k\)</span> 是单位外法向量，<span class="arithmatex">\(\mathbf{t}_k^1,\mathbf{t}_k^2\)</span> 是与边界相切的两个单位向量。记</p>
+<div class="arithmatex">\[
+T_k = (\mathbf{n}_k,\mathbf{t}_k^1,\mathbf{t}_k^2).
+\]</div>
+<p>对于不在滑动边界上的自由度，定义 <span class="arithmatex">\(T_k=I\)</span>,其中 <span class="arithmatex">\(I\)</span> 是 <span class="arithmatex">\(3\times 3\)</span> 的单位矩阵。
+则有</p>
+<div class="arithmatex">\[
+T=\begin{pmatrix}T_1&amp;&amp;\\&amp;\ddots&amp;\\&amp;&amp;T_M\end{pmatrix}.
+\]</div>
+<p>且 <span class="arithmatex">\(T\)</span> 是正交矩阵，把<span class="arithmatex">\(T\)</span>插入到(<a href="#eq:14" data-reference-type="ref"
+data-reference="eq:14">[eq:14]</a>)中，我们得到</p>
+<div class="arithmatex">\[
+\begin{pmatrix}
+\tilde{F} &amp; \tilde{B}^T \\
+\tilde{B} &amp; 0
+\end{pmatrix}
+\begin{pmatrix}
+\vec{\tilde{\mathbf{u}}} \\
+\vec{p}
+\end{pmatrix}=
+\begin{pmatrix}
+\vec{\tilde{\mathbf{r}}} \\
+0
+\end{pmatrix}
+\qquad(1.22)
+\]</div>
+<p>其中，</p>
+<div class="arithmatex">\[
+\widetilde{F}=TFT^{T},\quad{\widetilde{B}}=BT^{T},\quad{\vec{\widetilde{\mathbf{u}}}}=T\vec{\mathbf{u}},\quad{\vec{\widetilde{\mathbf{r}}}}=T\vec{\mathbf{r}}.
+\]</div>
+<p>现在把<span class="arithmatex">\(\vec{\widetilde{\mathbf{u}}}\)</span>当作未知数，注意到</p>
+<div class="arithmatex">\[
+\vec{\widetilde{\mathbf{u}}}_{k}=\begin{pmatrix}\mathbf{n}_{k}\cdot\mathbf{u}_{k},
+    \mathbf{t}_{k}^{1}\cdot\mathbf{u}_{k},
+    \mathbf{t}_{k}^{2}\cdot\mathbf{u}_{k}\end{pmatrix}^{T}=
+    \begin{pmatrix}0,\mathbf{t}_{k}^{1}\cdot\mathbf{u}_{k},
+        \mathbf{t}_{k}^{2}\cdot\mathbf{u}_{k}\end{pmatrix}^{T}\quad\forall k{\in}\sigma_{b,sld}.
+\]</div>
+<p>则对应于无穿透条件，只需令每个 <span class="arithmatex">\(\vec{\widetilde{\mathbf{u}}}_{k}\)</span> 的第一个分量为0。因此，我们可以通过
+求解(<a href="#eq:15" data-reference-type="ref"
+data-reference="eq:15">[eq:15]</a>)得到 <span class="arithmatex">\(\vec{\widetilde{\mathbf{u}}}\)</span>,然后通过<span class="arithmatex">\(\vec{\mathbf{u}}=T^{T}\vec{\widetilde{\mathbf{u}}}\)</span>
+得到(<a href="#eq:14" data-reference-type="ref"
+data-reference="eq:14">[eq:14]</a>)的解。</p>
+<h2 id="_6">线性方程组求解<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p>在数值模拟中为了获得较高的分辨率，从有限元离散中得到的大型稀疏线性方程组(<a href="#eq:15" data-reference-type="ref"
+data-reference="eq:15">[eq:15]</a>)可能含有上百万个未知数。求解这样的
+线性方程组对机器的算力和内存有很高的要求。以Krylov子空间方法（例如GMRES和CG）和预处理技巧（例如分块预优矩阵、多重网格
+和不完全LU分解）为基础的迭代法只需要进行矩阵向量乘法的计算，因此最为常用。这里我们讨论并行化预处理迭代方法来求解线性方程组
+(<a href="#eq:15" data-reference-type="ref"
+data-reference="eq:15">[eq:15]</a>)</p>
+<h3 id="_7">预处理器<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>考虑(<a href="#eq:15" data-reference-type="ref"
+data-reference="eq:15">[eq:15]</a>)中的系数矩阵的分块分解，我们有</p>
+<div class="arithmatex">\[
+\begin{pmatrix}
+\widetilde{F} &amp; \widetilde{B}^{\top} \\
+\widetilde{B} &amp; 0
+\end{pmatrix}=
+\begin{pmatrix}
+I &amp; 0 \\
+\widetilde{B}\widetilde{F}^{-1} &amp; I
+\end{pmatrix}
+\begin{pmatrix}
+\widetilde{F} &amp; \widetilde{B}^{\top} \\
+0 &amp; -S
+\end{pmatrix}
+\qquad(1.23)
+\]</div>
+<p>其中，<span class="arithmatex">\(S=\widetilde{B}\widetilde{F}^{-1}\widetilde{B}^{T}\)</span> 是Schur补。</p>
+<div class="arithmatex">\[
+\begin{pmatrix}\widetilde{F}&amp;\widetilde{B}^{T}\\0&amp;-S\end{pmatrix}
+\]</div>
+<p>是一个很理想的预处理矩阵。实际上，使用该预优矩阵的GMRES方法最多两次迭代就能够收敛。
+然而，把上式作为GMRES等迭代法的预优矩阵需要做该预优矩阵的逆和向量的乘法，该矩阵的逆为</p>
+<div class="arithmatex">\[
+\begin{pmatrix}
+\widetilde{F}^{-1}&amp;\widetilde{F}^{-1}\widetilde{B}^TS^{-1}\\
+0&amp;-S^{-1}
+\end{pmatrix}=
+\begin{pmatrix}
+\widetilde{F}^{-1}&amp;0\\
+0&amp;I
+\end{pmatrix}
+\begin{pmatrix}
+I&amp;-\widetilde{B}^T\\
+0&amp;I
+\end{pmatrix}
+\begin{pmatrix}
+I&amp;0\\
+0&amp;-S^{-1}
+\end{pmatrix}
+\qquad(1.24)
+\]</div>
+<p>为了避免计算 <span class="arithmatex">\(S^{-1}\)</span>，我们使用加权质量矩阵 <span class="arithmatex">\(M_{\eta}\)</span> 来替代 <span class="arithmatex">\(S^{-1}\)</span>，</p>
+<div class="arithmatex">\[
+(M_{\eta})_{i,j}=\int_{\Omega_{t}}(\eta_{\mathbf{u}_{h}^{(j-1)}})^{-1}\phi_{i}\phi_{j}d\mathbf{x}.
+\]</div>
+<p>其中 <span class="arithmatex">\(\phi_{i}\)</span> 是压强的基函数。因此，我们可以使用下面的矩阵</p>
+<div class="arithmatex">\[
+\begin{pmatrix}
+\widetilde{F}^{-1}&amp;\widetilde{F}^{-1}\widetilde{B}^TM_\eta^{-1}\\
+0&amp;-M_\eta^{-1}
+\end{pmatrix}=
+\begin{pmatrix}
+\widetilde{F}^{-1}&amp;0\\
+0&amp;I
+\end{pmatrix}
+\begin{pmatrix}
+I&amp;-\widetilde{B}^T\\
+0&amp;I
+\end{pmatrix}
+\begin{pmatrix}
+I&amp;0\\
+0&amp;-M_\eta^{-1}
+\end{pmatrix}
+\qquad(1.25)
+\]</div>
+<p>作为预优矩阵的逆的一个近似。只需求解下面的预优线性方程组</p>
+<div class="arithmatex">\[
+\begin{pmatrix}
+\widetilde{F} &amp; \widetilde{B}^T \\
+\widetilde{B} &amp; \mathbf{0}
+\end{pmatrix}
+\begin{pmatrix}
+\widetilde{F}^{-1} &amp; \widetilde{F}^{-1}\widetilde{B}^TM_\eta^{-1} \\
+\mathbf{0} &amp; -M_\eta^{-1}
+\end{pmatrix}
+\begin{pmatrix}
+\vec{\widetilde{\mathbf{v}}} \\
+\vec{q}
+\end{pmatrix}
+=
+\begin{pmatrix}
+\vec{\widetilde{\mathbf{r}}} \\
+0
+\end{pmatrix}
+\qquad(1.26)
+\]</div>
+<p>得到 <span class="arithmatex">\(\vec{\widetilde{\mathbf{v}}},\vec{q}\)</span> ,然后令</p>
+<div class="arithmatex">\[
+\begin{pmatrix}\vec{\widetilde{\mathbf{u}}}\\\vec{p}\end{pmatrix}=
+\begin{pmatrix}
+\widetilde{F}^{-1}
+&amp;
+\widetilde{F}^{-1}\widetilde{B}^{T}M_{\eta}^{-1}
+\\
+\mathbf{0}
+&amp;
+-M_{\eta}^{-1}
+\end{pmatrix}
+\begin{pmatrix}
+\vec{\widetilde{\mathbf{v}}}\\
+\vec{q}
+\end{pmatrix}
+\qquad(1.27)
+\]</div>
+<h3 id="_8">并行化<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>并行计算通常使用分而治之的策略来解决大规模问题。我们采用区域分解方法(DDM)
+用于系数
+矩阵的构造和分布式计算机处理器上的局部预处理。首先将有限元网格划分为若干个子网格，在并行时每个处理器计算一个子网格。这样
+就把整个区域上的问题分解为若干个相交子区域上的问题，而子区域上的问题会相对简单。我们只在水平方向使用“METIS”进行网格划分。</p>
+<p>基于这种划分方法，我们并行化了(<a href="#eq:15" data-reference-type="ref"
+data-reference="eq:15">[eq:15]</a>)的求解算法中的所有步骤，包括作为该算法一部分的两个GMRES
+迭代中遇到的所有矩阵向量乘法。我们使用AMG预处理的GMRES方法作为求解(<a href="#eq:15" data-reference-type="ref"
+data-reference="eq:15">[eq:15]</a>)的核心步骤。在我们的并行实现中使用了
+并行AMG求解器<em>BoomerAMG</em>。BoomerAMG具有很大的灵活性，可以在各种并行粗化策略和不同的插值算子之间进行选择。</p>
+<p>我们采用消息传递接口(MPI)作为并行环境。如上所述，在我们的实现中，我们在两个地方使用了GMRES方法
+以及块预处理和AMG预处理技术来求解(<a href="#eq:16" data-reference-type="ref"
+data-reference="eq:16">[eq:16]</a>);特别地，由于其可靠性和鲁棒性，我们在并行实现中采用了流行
+的软件包PETSc.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
