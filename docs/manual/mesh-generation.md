@@ -12,13 +12,15 @@ PoLarIS 基于有限元方法，支持结构网格和非结构网格。结构网
 更为复杂的非结构网格生成待后续补充，如需要请与我们联系。
 
 <p align="center">
-  <img src="../../assets/images/mesh-glacier-schematic.png" width="85%" alt="结构网格冰川模拟示意图"><br><br>
+  <img src="../../assets/images/mesh-glacier-schematic.png" width="60%" alt="结构网格冰川模拟示意图"><br><br>
   <!--<b>图2.1：</b>Taylor-Hood元。-->
 </p>
 
+只需确定可以覆盖冰川范围的四个角的坐标即可。
+
 ## 生成二维结构网格
 
-以理想化斜坡冰块算例为例，先在 `ism-mesh/scripts` 目录中编译 `struct2d.c`：
+我们提供了生成结构网格的脚本，可在[此处](https://github.com/phgism-project/PoLarIS-supports/tree/main/mesh-struct)获取。首先编译脚本 `struct2d.c`：
 
 ```bash
 gcc -o struct2d struct2d.c
@@ -81,7 +83,7 @@ sudo apt install libx11-dev
 
 ## 扩展为三维网格
 
-接下来用 `triangle2prism.c` 将二维网格沿垂向扩展为三维棱柱网格：
+接下来用 `triangle2prism.c` 将二维网格沿垂向扩展为三维棱柱网格，脚本在[这里](https://github.com/phgism-project/PoLarIS-supports/tree/main/mesh-struct)下载：
 
 ```bash
 gcc -o triangle2prism triangle2prism.c -lnetcdf
