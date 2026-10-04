@@ -11,6 +11,11 @@ PoLarIS 基于有限元方法，支持结构网格和非结构网格。结构网
 对于简便模拟，结构网格已足够，PoLarIS会自动识别冰和非冰区域，跳过非冰区域进行模拟。
 更为复杂的非结构网格生成待后续补充，如需要请与我们联系。
 
+<p align="center">
+  <img src="../../assets/images/mesh-glacier-schematic.png" width="85%" alt="结构网格冰川模拟示意图"><br><br>
+  <!--<b>图2.1：</b>Taylor-Hood元。-->
+</p>
+
 ## 生成二维结构网格
 
 以理想化斜坡冰块算例为例，先在 `ism-mesh/scripts` 目录中编译 `struct2d.c`：
@@ -109,7 +114,7 @@ gcc -o triangle2prism triangle2prism.c -lnetcdf \
 
 生成的 `mesh.nc` 就是 PoLarIS 需要读取的三维网格文件。
 
-//## ISMIP-HOM 网格 {#ismip-hom-grid}
+<!-- ## ISMIP-HOM 网格 {#ismip-hom-grid}
 
 //ISMIP-HOM Benchmark 算例的网格可以通过已有脚本生成。进入 ISMIP-HOM 网格目录并运行批处理脚本：
 
@@ -119,3 +124,4 @@ gcc -o triangle2prism triangle2prism.c -lnetcdf \
 //```
 
 //该步骤会生成 `mesh.nc`、`testA.nc` 和 `testC.nc`。其中 `mesh.nc` 是网格文件，`testA.nc` 和 `testC.nc` 是后续模拟中使用的测试地形与数据文件。
+-->

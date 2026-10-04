@@ -133,7 +133,7 @@ paraview output/ice_00001.vtk
 
 LaTeX 文档中还给出了一个 ISMIP-HOM Benchmark 示例，用于进一步检查 PoLarIS 在标准测试中的运行情况。
 
-开始本算例前，先按照[网格生成](mesh-generation.md#ismip-hom-grid)生成 `mesh.nc`、`testA.nc` 和 `testC.nc`。
+开始本算例前，先按照[网格生成](mesh-generation.md)生成 `mesh.nc`、`testA.nc` 和 `testC.nc`。
 
 ### 准备运行目录
 
