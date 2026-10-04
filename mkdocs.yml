@@ -33,6 +33,7 @@ nav:
       - 编译安装: manual/installation.md
       - 输入数据: manual/input-data.md
       - 参数配置: manual/configuration.md
+      - 网格生成: manual/mesh-generation.md
       - 模拟案例: manual/workflow.md
       - 输出说明: manual/outputs.md
       - 常见问题: manual/faq.md
