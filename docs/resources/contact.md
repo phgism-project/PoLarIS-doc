@@ -4,9 +4,9 @@
 
 | 项目 | 内容 |
 | --- | --- |
-| 维护团队 | 待补充 |
-| 邮箱 | 待补充 |
-| 仓库 | 待补充 |
+| 维护团队 | PoLarIS 开发团队|
+| 邮箱 | tongzhangice@gmail.com |
+| 仓库 | https://github.com/phgism-project/PoLarIS |
 
 ## 反馈问题
 

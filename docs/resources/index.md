@@ -1,6 +1,6 @@
 # 资源
 
-这里集中维护 PoLarIS 的数据入口、示例配置、论文引用和联系方式。
+我们提供了使用PoLarIS所需的一些常用脚本和数据，可在[此处](https://github.com/phgism-project/PoLarIS-supports)获取
 
 ## 快速入口
 
