@@ -8,6 +8,8 @@ PoLarIS 基于有限元方法，支持结构网格和非结构网格。结构网
 | 非结构网格 | 可根据研究需求灵活加密或粗化不同区域 | 前后处理更复杂，网格质量会影响收敛 |
 
 一般来说，全南极、全格陵兰、长时间古气候模拟等大范围实验可优先考虑结构网格；特定流域、冰川或高精度冰海耦合问题更适合非结构网格。
+对于简便模拟，结构网格已足够，PoLarIS会自动识别冰和非冰区域，跳过非冰区域进行模拟。
+更为复杂的非结构网格生成待后续补充，如需要请与我们联系。
 
 ## 生成二维结构网格
 
@@ -107,13 +109,13 @@ gcc -o triangle2prism triangle2prism.c -lnetcdf \
 
 生成的 `mesh.nc` 就是 PoLarIS 需要读取的三维网格文件。
 
-## ISMIP-HOM 网格 {#ismip-hom-grid}
+//## ISMIP-HOM 网格 {#ismip-hom-grid}
 
-ISMIP-HOM Benchmark 算例的网格可以通过已有脚本生成。进入 ISMIP-HOM 网格目录并运行批处理脚本：
+//ISMIP-HOM Benchmark 算例的网格可以通过已有脚本生成。进入 ISMIP-HOM 网格目录并运行批处理脚本：
 
-```bash
-cd Summer/ism-mesh/ISMIP-HOM
-. batch.sh
-```
+//```bash
+//cd Summer/ism-mesh/ISMIP-HOM
+//. batch.sh
+//```
 
-该步骤会生成 `mesh.nc`、`testA.nc` 和 `testC.nc`。其中 `mesh.nc` 是网格文件，`testA.nc` 和 `testC.nc` 是后续模拟中使用的测试地形与数据文件。
+//该步骤会生成 `mesh.nc`、`testA.nc` 和 `testC.nc`。其中 `mesh.nc` 是网格文件，`testA.nc` 和 `testC.nc` 是后续模拟中使用的测试地形与数据文件。
