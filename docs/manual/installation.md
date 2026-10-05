@@ -214,6 +214,7 @@ mpirun -n 4 ./ins-flow
 
 其中，`-n 4`表示使用4个MPI进程。具体运行方法见数值模拟案例
 
+<!--
 !!! note "源码版本说明"
     上述目录和编译命令对应技术手册所使用的源码结构。不同代码分支的目录结构或编译入口可能有所不同，应以当前源码分支中实际存在的`Makefile`或构建脚本为准。
 
@@ -232,3 +233,4 @@ mpirun -n 4 ./ins-flow
 
 !!! warning "NetCDF 路径"
     如果编译器找不到 NetCDF，请检查 `NETCDF_ROOT`、`LD_LIBRARY_PATH` 或集群模块加载配置。
+-->
