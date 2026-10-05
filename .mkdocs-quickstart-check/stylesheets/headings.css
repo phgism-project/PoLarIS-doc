@@ -1,0 +1,15 @@
+.md-content .md-typeset h1,
+.md-content .md-typeset h2,
+.md-content .md-typeset h3,
+.md-content .md-typeset h4,
+.md-content .md-typeset h5,
+.md-content .md-typeset h6,
+.md-content .md-typeset h1 .headerlink,
+.md-content .md-typeset h2 .headerlink,
+.md-content .md-typeset h3 .headerlink,
+.md-content .md-typeset h4 .headerlink,
+.md-content .md-typeset h5 .headerlink,
+.md-content .md-typeset h6 .headerlink {
+  color: #0b3158 !important;
+  font-weight: 800 !important;
+}
