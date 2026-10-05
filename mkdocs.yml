@@ -35,7 +35,6 @@ nav:
       - 网格生成: manual/mesh-generation.md
       - 模拟案例: manual/workflow.md
       - 输出说明: manual/outputs.md
-      - 常见问题: manual/faq.md
   - 资源:
       - resources/index.md
       - 数据与配置: resources/data-and-configs.md

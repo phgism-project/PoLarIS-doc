@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">PoLarIS polar map logo concept</title>
+  <desc id="desc">A polar projection with an Antarctic ice sheet and model flow traces.</desc>
+  <defs>
+    <radialGradient id="sea" cx="50%" cy="42%" r="72%">
+      <stop offset="0" stop-color="#1b5a70"/>
+      <stop offset="1" stop-color="#10222f"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="256" height="256" rx="42" fill="#10222f"/>
+  <circle cx="128" cy="128" r="96" fill="url(#sea)" stroke="#76d4e7" stroke-width="5"/>
+  <circle cx="128" cy="128" r="70" fill="none" stroke="#8ddfec" stroke-width="2" opacity="0.45"/>
+  <circle cx="128" cy="128" r="42" fill="none" stroke="#8ddfec" stroke-width="2" opacity="0.35"/>
+  <path d="M128 32v192M32 128h192M60 60l136 136M196 60L60 196" stroke="#8ddfec" stroke-width="2" opacity="0.34"/>
+
+  <path
+    d="M124 67c24 7 34 22 36 42 25 7 42 25 37 45-5 19-29 21-48 20-14 20-37 27-57 16-18-10-17-29-12-47-21-15-25-38-9-54 13-14 34-10 53-22Z"
+    fill="#f7fdff"
+    stroke="#c7eef6"
+    stroke-width="5"
+    stroke-linejoin="round"
+  />
+  <path d="M91 127c23-11 49-13 79-5" fill="none" stroke="#4dbbd3" stroke-width="6" stroke-linecap="round"/>
+  <path d="M93 151c22-6 45-4 69 7" fill="none" stroke="#74d4e5" stroke-width="5" stroke-linecap="round"/>
+  <path d="M108 101c16-8 33-9 51-2" fill="none" stroke="#1b7896" stroke-width="5" stroke-linecap="round"/>
+
+  <path d="M52 205h152" stroke="#dff8fc" stroke-width="6" stroke-linecap="round"/>
+  <path d="M68 218h120" stroke="#61c7dc" stroke-width="5" stroke-linecap="round"/>
+</svg>

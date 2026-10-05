@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="PoLarIS mark">
+  <rect width="64" height="64" rx="12" fill="#10222f"/>
+  <path d="M10 42c10-16 20-24 32-24 5 0 9 1 12 3-9 0-17 5-25 14l-6 7H10Z" fill="#aee7f2"/>
+  <path d="M16 48h38c-4-7-9-11-15-11-7 0-12 4-16 11h-7Z" fill="#ffffff"/>
+  <circle cx="47" cy="18" r="4" fill="#52d1e5"/>
+</svg>
