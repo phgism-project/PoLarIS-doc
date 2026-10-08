@@ -49,14 +49,14 @@
   publisher={Cambridge University Press}
 }
 
-@article{leng2012parallel,
-  title={A parallel high-order accurate finite element nonlinear Stokes ice sheet model and benchmark experiments},
-  author={Leng, Wei and Ju, Lili and Gunzburger, Max and Price, Stephen and Ringler, Todd},
-  journal={Journal of Geophysical Research: Earth Surface},
-  volume={117},
-  number={F1},
-  year={2012},
-  publisher={Wiley Online Library}
+@article{leng2014finite,
+  title={Finite element three-dimensional Stokes ice sheet dynamics model with enhanced local mass conservation},
+  author={Leng, Wei and Ju, Lili and Xie, Yan and Cui, Tao and Gunzburger, Max},
+  journal={Journal of Computational Physics},
+  volume={274},
+  pages={299--311},
+  year={2014},
+  publisher={Elsevier}
 }
 
 @article{leng2014parallel,
@@ -69,4 +69,15 @@
   year={2014},
   publisher={Cambridge University Press}
 }
+
+@article{leng2012parallel,
+  title={A parallel high-order accurate finite element nonlinear Stokes ice sheet model and benchmark experiments},
+  author={Leng, Wei and Ju, Lili and Gunzburger, Max and Price, Stephen and Ringler, Todd},
+  journal={Journal of Geophysical Research: Earth Surface},
+  volume={117},
+  number={F1},
+  year={2012},
+  publisher={Wiley Online Library}
+}
+
 ```
